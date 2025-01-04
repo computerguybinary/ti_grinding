@@ -55,5 +55,58 @@
     <p>now try to put variable in the Disp function like this :</p>
     <h5>Disp b</h5>
     <a href="https://education.ti.com/en/activities/ti-codes/84/10-minutes">to find more info on how to use th ti 84</a>
-</body>
+    <h1>monthly games</h1>
+    <p>every month we put code so you can try it</p>
+    <p>here is some</p>
+    <h6>:ClrHome
+        :DelVar XDelVar YDelVar VXDelVar VY
+        :1→X
+        :1→Y
+        :0→VX
+        :0→VY
+        :Lbl MAIN
+        :Repeat 0
+        :ClrHome
+        :Output(Y,X,"O")
+        :If getKey=24
+        :Then
+        :1→VX
+        :ElseIf getKey=26
+        :Then
+        :-1→VX
+        :Else
+        :0→VX
+        :End
+        :If getKey=25 and Y=1
+        :Then
+        :3→VY
+        :End
+        :X+VX→X
+        :If X>16
+        :Then
+        :1→X
+        :ElseIf X<1
+        :Then
+        :16→X
+        :End
+        :Y+VY→Y
+        :If Y<1
+        :Then
+        :1→Y
+        :0→VY
+        :End
+        :If Y>8
+        :Then
+        :8→Y
+        :End
+        :If VY>0
+        :Then
+        :VY-1→VY
+        :ElseIf VY<0
+        :Then
+        :VY+1→VY
+        :End
+        :Goto MAIN
+    </h6>
+    </body>
 </html>
