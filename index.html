@@ -63,55 +63,55 @@
     <p>here is some</p>
     <p id="code" value="">
         <p>😂 bah try to copy it </p>
-        <button onclick="copy_text()">    :DelVar XDelVar YDelVar VXDelVar VY
-            :1→X
-            :1→Y
+        <button onclick="copy_text()" value=":DelVar XDelVar YDelVar VXDelVar VY
+        :1→X
+        :1→Y
+        :0→VX
+            :0→VY
+            :Lbl MAIN
+            :Repeat 0
+            :ClrHome
+            :Output(Y,X,"O")
+            :If getKey=24
+            :Then
+            :1→VX
+            :ElseIf getKey=26
+            :Then
+            :-1→VX
+            :Else
             :0→VX
-                :0→VY
-                :Lbl MAIN
-                :Repeat 0
-                :ClrHome
-                :Output(Y,X,"O")
-                :If getKey=24
-                :Then
-                :1→VX
-                :ElseIf getKey=26
-                :Then
-                :-1→VX
-                :Else
-                :0→VX
-                :End
-                :If getKey=25 and Y=1
-                :Then
-                :3→VY
-                :End
-                :X+VX→X
-                :If X>16
-                :Then
-                :1→X
-                :ElseIf X<1
-                :Then
-                :16→X
-                :End
-                :Y+VY→Y
-                :If Y<1
-                :Then
-                :1→Y
-                :0→VY
-                :End
-                :If Y>8
-                :Then
-                :8→Y
-                :End
-                :If VY>0
-                :Then
-                :VY-1→VY
-                :ElseIf VY<0
-                :Then
-                :VY+1→VY
-                :End
-                :Goto MAIN
-            </button>
+            :End
+            :If getKey=25 and Y=1
+            :Then
+            :3→VY
+            :End
+            :X+VX→X
+            :If X>16
+            :Then
+            :1→X
+            :ElseIf X<1
+            :Then
+            :16→X
+            :End
+            :Y+VY→Y
+            :If Y<1
+            :Then
+            :1→Y
+            :0→VY
+            :End
+            :If Y>8
+            :Then
+            :8→Y
+            :End
+            :If VY>0
+            :Then
+            :VY-1→VY
+            :ElseIf VY<0
+            :Then
+            :VY+1→VY
+            :End
+            :Goto MAIN"></button>
+            
         
     
     </body>
